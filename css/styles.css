@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:ital,wght@0,100;1,300;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    margin: 15px;
+}
+
+/*nav*/
+nav ul li {
+    display: inline;
+   
+}
+.hover{
+    transition: all 1s ease;   
+}
+.hover:hover{
+    transform: scale(1.5);
+}
+nav{
+    height: 415px;
+    width: 65%;
+    background-image: url(../imagenes/embarazo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px;
+    border: solid 2px black;
+    
+    
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li{
+    margin-left: 20px;
+    list-style-type: none;
+}
+a{
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(3, 0, 5);
+}
+/*hasta aqui nav*/
+header{
+    display: flex;
+    flex-direction: row;
+    grid-area: header;
+}
+/*logo*/
+header img{
+    width: 400px;
+    padding: 15px;
+    border: solid 2px rgb(3, 0, 5)
+
+}
+
+h1{
+    color:#CBE896;
+    background-color: #272D2D;
+    text-align: center;
+    font-style: italic;
+    font-size: 80px;
+    width: 100%;
+    
+}
+body{
+    background-color: #FAE3C6;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+}
+/*recuadro de los textos*/
+.pruebo-box{
+    padding: 15px;
+    border: solid 5px #272D2D;
+    margin:  15px 0 15px 0;
+}
+/*link ir arriba*/
+div a{
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+/*footer*/
+footer div img{
+   /* width: 75px;*/
+    height: 75px;
+}
+
+footer{
+    margin: 30px;
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*las líneas de código hasta aquí son comunes a todas las páginas*/
+/*grilla para el index*/
+.index{
+    display: grid;
+
+    grid-template-areas: 
+    "header header"
+    "rel rel"
+    "cito cito"
+    "lac ob"
+    "lnav lnav"
+    "footer footer"
+    ;
+    justify-items: stretch;
+}
+.ob{
+    grid-area: ob;
+    width: 500px;
+    justify-self: center;
+}
+.cito{
+    grid-area: cito;
+}
+.lac{
+    grid-area: lac;
+    width: 500px;
+    justify-self: center;
+}
+.lac div{
+    padding: 10px;
+}
+.lac div p{
+    padding: 5px }
+
+.lnav{
+    grid-area: lnav;
+    font-style: italic;
+}
+
+/*ancho de las fotos index*/
+.pami{
+    width: 250px;
+}
+.jerarquico{
+    width: 250px;
+}
+
+/*imagen grande index*/
+.bioquimico{
+    padding: 15px;
+    border: solid 2px black;
+    width: 1285px;
+}
+.relativo{
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    grid-area: rel;
+   
+}
+.pruebo-box p{
+    display: inline;
+}
+/*seccion lab colegas*/
+
+.laht{
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+}
+.laht img{
+    border: solid 2px black;
+    margin: 0 0 5px 0;
+    width: 250px;
+    
+}
+.tucuman{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.tucuman img{
+    border: solid 2px black;
+    width: 250px;
+}
+/*seccion obras sociales*/
+.obrasSociales{
+    display: grid;
+    grid-template-columns: auto  auto;
+    grid-row-gap: 15px;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.obrasSociales img{
+    border: solid 2px #272D2D;
+}
+
+/*aca es estudios*/
+.grillaes{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "cajauno"
+    "cajados"
+    "iframe"
+    "lnav"
+    "footer";
+}
+.cajauno{
+    grid-area: cajauno;
+}
+.cajados{
+    grid-area: cajados;
+}
+h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+}
+article ul li{
+    list-style-type: square;
+}
+.trans{
+    animation-name: estudios;
+    animation-duration: 2s;
+    
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+    
+}
+
+@keyframes estudios{
+    0%{margin-left: 0;}
+    10%{margin: 0;}
+
+    25%{margin-left: 40px;}
+    50%{margin-left: 40px;}
+
+    50%{margin-right: 40px;}
+    75%{margin-right:40px}
+
+    75%{margin-right: 0;}
+    100%{margin-right: 0;}
+}
+
+
+
+/*hago la grilla de los diferentes estudios*/
+.grid-estudios{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "artuno artdos"
+    "arttres artcuatro";
+    grid-column-gap: 15px;
+    grid-area: grid-estudios;
+}
+.artuno{
+    grid-area: artuno; 
+}
+.artdos{
+    grid-area: artdos;
+}
+.arttres{
+    grid-area:arttres;
+}
+.artcuatro{
+    grid-area: artcuatro;
+}
+.grid-estudios h2{
+    grid-area: titulo;
+}
+/*termina la grilla*/
+/*pongo padding a los parrafos dentro de los articles*/
+.margin20{
+    margin: 20px;
+}
+
+.iframe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: iframe;
+    width: 100%;
+}
+.iframe:hover{
+    animation-name: cambioiframe;
+    animation-duration: 3s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+@keyframes cambioiframe  {
+    25%{
+        transform: scale(1.2);
+        background-color:#CBE896 ;
+    }
+    
+}
+
+
+/*aca empieza laboratorio*/
+.grilla{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titlab"
+    "container"
+    "lnav"
+    "footer";
+}
+.titlab{
+    grid-area: titlab;
+}
+.prop{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    line-height: 160%;
+    text-align: justify;
+    font-weight: 100;
+}
+.flab{
+    display: flex;
+    margin: 15px;
+    border: black solid 2px;
+    display: flex;
+    background-color:#272D2D;
+    flex-direction: column;
+    align-items: center;
+    height: 930px;
+    justify-content: space-between;
+    width: 250px;
+   
+}
+.flab img{
+    padding: 0 10px 0 10px;
+    width: 250px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    grid-area: container;
+}
+.transdos:hover{
+    animation-name: lab;
+    animation-duration: 2s;
+    
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+    
+}
+
+@keyframes lab{
+    0%{margin-top: 0;}
+    10%{margin-top: 0;}
+
+    25%{margin-top: -40px;}
+    50%{margin-top: -40px;}
+
+    50%{margin-top: -20px;}
+    75%{margin-top: -20px}
+
+    75%{margin-top: 0;}
+    100%{margin-top: 0;}
+}
+/*hasta aca es laboratorio*/
+/*empiezo seccion contactenos*/
+
+form{
+    margin: 10px;
+    font-weight: 900;
+    inline-size: 50%;
+    width: 510px;
+    background-color: #CBE896;
+    height: 500px;
+    border:solid 5px #272D2D;
+} 
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+}
+legend{
+    font-size: 30px;
+}
+.contenido section img{
+    padding: 0;
+    border:solid 5px #272D2D;
+}
+.contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;   
+    grid-area: contenido;
+}
+.contacto{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "principal"
+    "contenido"
+    "lnav"
+    "footer";
+}
+.principal{
+    grid-area: principal;
+}
+
+
+
+/*empiezo seccion nosotros*/
+h4{
+    margin: 10px;
+    font-weight: 900;
+}
+.nosotros{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "prinnos"
+    "secprin"
+    "lnav"
+    "footer"
+    ;
+
+}
+.prinnos{
+    grid-area: prinnos;
+}
+.secprin{
+    display: flex;
+    flex-direction: row;
+    grid-area: secprin;
+    justify-content: space-between;
+}
+.his div{
+    margin: 100px 0 50px 0;
+
+}
+.his h3{
+    margin: 20px 0 0 0;
+}
+.eq div{
+    margin: 100px 0 50px 0;
+}
+.eq h3{
+    margin: 20px 0 0 0; 
+}
+
+
+/*===MEDIA QUERIES===*/ 
+
+@media (max-width: 768px) {
+         /*nav*/
+nav{
+    width: 65%;
+}
+        /*Ir Arriba*/
+ .lnav{
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: underline;
+        }
+        /*index*/
+.bioquimico{
+    display: none;
+}
+.cito p{
+    line-height: 300%;
+    font-size: 2em;
+    font-style: italic;
+}
+.laht p{
+    display: none;
+}
+.tucuman p{
+    display: none;
+}
+.lac{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+        /*footer*/
+footer  div p{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+        /*estudios*/
+.interlineado{
+    line-height: 150%;
+}
+.texto{
+    font-size: 2em;
+    
+}
+.iframe{
+    display: none;
+}
+        /*laboratorio*/
+.flab{
+    display: none;
+}
+        /*contacto*/
+
+legend{
+    font-size: 60px;
+}
+
+label{
+    font-size: 2em;
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;   
+    grid-area: contenido;
+}
+    /*nosotros*/
+    h4{
+        margin: 10px;
+        font-weight: 900;
+    }
+    
+    .secprin{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 415px;
+    }
+    h2{
+        text-align: center;
+        font-size: 6em;
+        font-weight: 900;
+    }
+    .fflex p{
+        font-size: 2em;
+        font-weight: 900;
+        font-style: italic;
+    }
+    footer div img{
+        display: none;
+    }
+    /*link ir arriba*/
+    .lnav{
+        display: none;
+     }
+    .sitio{
+        display: none;
+    }
+
+    /*INDEX*/
+    .index{
+        display: grid;
+    
+        grid-template-areas: 
+        "header header"
+        "rel rel"
+        "cito cito"
+        
+        "ob ob"
+        "footer footer"
+        ;
+        justify-items: stretch;
+    }
+    .obrasSociales img{
+        width: 250px;
+    }
+    .lac{
+        display: none;
+    }
+    .obrasSociales{
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 30px;
+       
+    }
+    .cito p{
+        font-size: 3em;
+
+    }
+    /*ESTUDIOS*/
+    .artuno ul{
+        display: none;
+    }
+    .artdos div{
+        display: none;
+    }
+    .arttres div{
+        display: none;
+    }
+    .artcuatro ul{
+        display: none;
+    }
+}   h3{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    }
+    .grid-estudios{
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "artuno" 
+        "artdos"
+        "arttres" 
+        "artcuatro";
+        grid-column-gap: 15px;
+     
+    }
+    /*LABORATORIO*-- no hay modificaciones solo en el nav y footer/
+    /*CONTACTO*/
+
+ 
+    /*NOSOTROS*/
+   .int{
+       line-height: 170%;
+   }
+   h4{
+       font-size: 2em;
+       font-style: italic;
+   }
