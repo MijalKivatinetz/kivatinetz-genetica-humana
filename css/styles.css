@@ -148,6 +148,10 @@ footer{
     grid-area: lnav;
     font-style: italic;
 }
+    
+
+
+
 
 /*ancho de las fotos index*/
 .pami{
@@ -367,6 +371,7 @@ article ul li{
 
     
 }
+
 
 @keyframes lab{
     0%{margin-top: 0;}
