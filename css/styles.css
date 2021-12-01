@@ -358,29 +358,7 @@ article ul li{
     width: 100%;
     grid-area: container;
 }
-.transdos:hover{
-    animation-name: lab;
-    animation-duration: 2s;
-    
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
 
-    
-}
-
-@keyframes lab{
-    0%{margin-top: 0;}
-    10%{margin-top: 0;}
-
-    25%{margin-top: -40px;}
-    50%{margin-top: -40px;}
-
-    50%{margin-top: -20px;}
-    75%{margin-top: -20px}
-
-    75%{margin-top: 0;}
-    100%{margin-top: 0;}
-}
 /*hasta aca es laboratorio*/
 /*empiezo seccion contactenos*/
 
